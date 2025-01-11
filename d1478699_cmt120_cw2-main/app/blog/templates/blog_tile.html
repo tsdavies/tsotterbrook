@@ -1,0 +1,56 @@
+<div class="col-md-4 mb-2">
+  <div class="card mb-4 shadow-sm h-100">
+    <div class="card-body">
+      <h5 class="card-title">{{ post.title }}</h5>
+      <p class="card-text text-clamp">
+        {% if post.summary %} {{ post.summary }} {% else %} {{ post.content }}
+        {% endif %}
+      </p>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center">
+      <!-- Icons Section -->
+      <div class="footer-icons d-flex">
+        {% if post.repository_url %}
+        <a
+          href="{{ post.repository_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Repository"
+          title="View the repository on GitHub"
+          class="me-3"
+        >
+          <span
+            class="iconify"
+            data-icon="mdi:github"
+            aria-hidden="true"
+            style="color: #4078c0; font-size: 1.5rem"
+          ></span>
+        </a>
+        {% endif %} {% if post.live_demo_url %}
+        <a
+          href="{{ post.live_demo_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Live Demo"
+          title="View the live demo"
+          class="me-3"
+        >
+          <span
+            class="iconify"
+            data-icon="mdi:web"
+            aria-hidden="true"
+            style="color: #4caf50; font-size: 1.5rem"
+          ></span>
+        </a>
+        {% endif %}
+      </div>
+      <!-- Read More Button -->
+      <a
+        href="{{ url_for('blog.post_detail', post_id=post.id) }}"
+        class="card-button"
+      >
+        View
+      </a>
+    </div>
+  </div>
+</div>

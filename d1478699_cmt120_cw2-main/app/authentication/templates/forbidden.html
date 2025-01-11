@@ -1,0 +1,11 @@
+{% extends "page_template.html" %} {% block content %}
+<main class="container my-5">
+  <div class="text-center">
+    <h1 class="display-4 text-danger">403 Forbidden</h1>
+    <p class="lead">You do not have permission to access this page.</p>
+    <a href="{{ url_for('about.about') }}" class="btn btn-primary mt-3"
+      >Return to Home</a
+    >
+  </div>
+</main>
+{% endblock %}

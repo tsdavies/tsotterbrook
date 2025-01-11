@@ -1,0 +1,19 @@
+{% extends "page_template.html" %} {% block content %}
+<main class="container my-5">
+  <h1 class="text-center mb-4">Blog Posts</h1>
+
+  <!-- Blog Posts List -->
+  <div class="row">
+    {% for post in posts %} {% include "blog_tile.html" %} {% endfor %}
+  </div>
+
+  <!-- Create New Post Button -->
+  {% if is_admin() %}
+  <div class="text-center mt-4">
+    <a href="{{ url_for('blog.new_post') }}" class="btn btn-success">
+      <i class="bi bi-plus-circle"></i> Create New Post
+    </a>
+  </div>
+  {% endif %}
+</main>
+{% endblock %}

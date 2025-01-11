@@ -1,0 +1,41 @@
+{% extends "page_template.html" %} {% block content %}
+<main class="container my-5">
+  <section>
+    <h2 class="text-center mb-4">Register</h2>
+    <form class="needs-validation" novalidate method="post">
+      {{ form.hidden_tag() }}
+
+      <!-- Username Field -->
+      <div class="mb-3">
+        {{ form.username.label(class="form-label") }} {{
+        form.username(class="form-control", size=32) }}
+        <div class="invalid-feedback">Please enter a username.</div>
+      </div>
+
+      <!-- Email Field -->
+      <div class="mb-3">
+        {{ form.email.label(class="form-label") }} {{
+        form.email(class="form-control", size=32) }}
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+
+      <!-- Password Field -->
+      <div class="mb-3">
+        {{ form.password.label(class="form-label") }} {{
+        form.password(class="form-control", size=32) }}
+        <div class="invalid-feedback">Please enter a password.</div>
+      </div>
+
+      <!-- Confirm Password Field -->
+      <div class="mb-3">
+        {{ form.confirm_password.label(class="form-label") }} {{
+        form.confirm_password(class="form-control", size=32) }}
+        <div class="invalid-feedback">Please confirm your password.</div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">{{ form.submit(class="btn btn-primary") }}</div>
+    </form>
+  </section>
+</main>
+{% endblock %}

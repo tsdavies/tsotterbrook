@@ -1,0 +1,106 @@
+{% extends "page_template.html" %} {% block content %}
+	<main class="container my-3">
+		<h2>Contact Me</h2>
+		<section class="card my-2">
+			<div class="card-body">
+				<h2 class="card-title">Follow Tammy Davies</h2>
+				<p class="card-text">Stay connected through social media:</p>
+				<ul class="list-unstyled">
+
+					<li class="mb-2">
+						<a href="https://bsky.app/profile/tsdavies.bsky.social" target="_blank"
+						   class="text-decoration-none d-flex align-items-center">
+                                <span class="iconify me-2" data-icon="mdi:butterfly-outline"
+									  style="font-size: 1.5rem;"></span>
+							BlueSky
+						</a>
+					</li>
+
+					<li class="mb-2">
+						<a href="https://www.instagram.com/tammy_s_davies" target="_blank"
+						   class="text-decoration-none d-flex align-items-center">
+							<span class="iconify me-2" data-icon="mdi:instagram" style="font-size: 1.5rem;"></span>
+							Instagram
+						</a>
+					</li>
+
+					<li class="mb-2">
+						<a href="https://www.facebook.com/tammy.davies" target="_blank"
+						   class="text-decoration-none d-flex align-items-center">
+							<span class="iconify me-2" data-icon="mdi:facebook" style="font-size: 1.5rem;"></span>
+							Facebook
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="card my-2">
+			<div class="card-body">
+				<h2 class="card-title">Or Email me</h2>
+				<p class="card-text">I look forward to hearing from you:</p>
+				<form class="needs-validation" novalidate method="POST" action="{{ url_for('contact.contact') }}">
+					{{ form.hidden_tag() }}
+					<!-- Name -->
+					<div class="mb-3">
+						<label for="name" class="form-label">Name:</label>
+						{{ form.name(class_="form-control", id="name", required=True, minlength=2, maxlength=50) }}
+						<div class="invalid-feedback">Please enter your name.</div>
+					</div>
+					<!-- Email -->
+					<div class="mb-3">
+						<label for="email" class="form-label">Email:</label>
+						{{ form.email(class_="form-control", id="email", required=True, type="email") }}
+						<div class="invalid-feedback">Please enter a valid email address.</div>
+					</div>
+					<!-- Message -->
+					<div class="mb-3">
+						<label for="message" class="form-label">Message:</label>
+						{{ form.message(class_="form-control", id="message", required=True, minlength=10, maxlength=1000) }}
+						<div class="invalid-feedback">Please enter your message.</div>
+					</div>
+					<!-- Submit Button -->
+					<div class="text-center">
+						{{ form.submit(class_="btn btn-primary") }}
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const form = document.querySelector(".needs-validation");
+                const emailField = document.getElementById("email");
+
+                // Custom Email Validation Function
+                const isValidEmail = (email) => {
+                    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    return emailRegex.test(email);
+                };
+
+                emailField.addEventListener("input", () => {
+                    if (!isValidEmail(emailField.value)) {
+                        emailField.classList.add("is-invalid");
+                        emailField.classList.remove("is-valid");
+                    } else {
+                        emailField.classList.add("is-valid");
+                        emailField.classList.remove("is-invalid");
+                    }
+                });
+
+                form.addEventListener("submit", (event) => {
+                    if (!form.checkValidity() || !isValidEmail(emailField.value)) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        if (!isValidEmail(emailField.value)) {
+                            emailField.classList.add("is-invalid");
+                            emailField.classList.remove("is-valid");
+                        }
+                    }
+
+                    form.classList.add("was-validated");
+                });
+            });
+		</script>
+	</main>
+{% endblock %}

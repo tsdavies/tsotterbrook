@@ -1,0 +1,70 @@
+.card-body {
+  padding: 1.5rem;
+  position: relative; /* Ensure icons are well-positioned */
+}
+
+.card-title {
+  font-family: 'Prompt', 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  font-family: 'Prompt', 'Open Sans', sans-serif;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.card-icons {
+  display: flex;
+  justify-content: center; /* Centre icons */
+  align-items: center;
+  gap: 15px; /* Space between icons */
+}
+
+.card-icons .iconify {
+  width: 40px !important;
+  height: 40px !important;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.05); /* Subtle background */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card-icons .iconify:hover {
+  transform: scale(1.2); /* Slight zoom */
+  background-color: rgba(0, 0, 0, 0.1); /* Darker background */
+}
+
+.card-footer {
+  background: linear-gradient(to right, #f8f9fa, #e9ecef); /* Soft gradient */
+  border-top: none;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: flex-end; /* Always align the button to the right */
+  align-items: center; /* Vertical alignment */
+}
+
+.card-button {
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Unique gradient */
+  border: none;
+  border-radius: 20px; /* Rounded edges */
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+}
+
+.card-button:hover {
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  background: linear-gradient(to right, #ff69b4, #1e90ff); /* Reverse gradient */
+}
+
+.card-button:active {
+  transform: scale(0.98); /* Slight shrink on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+

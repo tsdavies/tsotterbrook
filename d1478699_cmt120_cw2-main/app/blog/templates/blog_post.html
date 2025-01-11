@@ -1,0 +1,90 @@
+{% extends "page_template.html" %} {% block content %}
+    <main class="container my-5">
+        <h1 class="text-center mb-4">
+            {{ 'Edit Post' if edit else 'Create New Post' }}
+        </h1>
+
+        <form
+                class="needs-validation"
+                novalidate
+                method="POST"
+                action="{{ url_for('blog.edit_post', post_id=post.id) if edit else url_for('blog.new_post') }}"
+        >
+            {{ form.hidden_tag() }}
+
+            <!-- Title Field -->
+            <div class="mb-3">
+                {{ form.title.label(class="form-label") }} {{ form.title(class="form-control", size=50) }}
+                <div class="invalid-feedback">Please provide a title for the post.</div>
+            </div>
+
+            <!-- Summary Field -->
+            <div class="mb-3">
+                {{ form.summary.label(class="form-label") }} {{ form.summary(class="form-control", rows=3) }}
+                <div class="invalid-feedback">Please provide a summary for the post.</div>
+            </div>
+
+            <!-- Content Field with Preview -->
+            <div class="mb-3">
+                {{ form.content.label(class="form-label") }} {{ form.content(id="content",
+      class="form-control", rows=10) }}
+                <div class="invalid-feedback">Content cannot be empty.</div>
+            </div>
+            <button type="button" id="preview-button" class="btn btn-secondary mb-3">
+                Preview Markdown
+            </button>
+
+            <!-- Markdown Preview Section -->
+            <div id="preview" class="border p-3 mb-2" style="background-color: #f9f9f9">
+                <p class="text-muted">Your preview will appear here...</p>
+            </div>
+
+            <!-- Repository URL Field -->
+            <div class="mb-3">
+                {{ form.repository_url.label(class="form-label") }} {{ form.repository_url(class="form-control", size=50) }}
+                <div class="invalid-feedback">Please provide a valid repository URL.</div>
+            </div>
+
+            <!-- Live Demo URL Field -->
+            <div class="mb-3">
+                {{ form.live_demo_url.label(class="form-label") }} {{ form.live_demo_url(class="form-control", size=50) }}
+                <div class="invalid-feedback">Please provide a valid live demo URL.</div>
+            </div>
+
+            <div class="mb-3">
+                {{ form.priority.label(class="form-label") }} {{ form.priority(class="form-control", size=50) }}
+                <div class="invalid-feedback">Please provide a valid number (integer).</div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">{{ form.submit(class="btn btn-primary") }}</div>
+        </form>
+    </main>
+
+    <!-- JavaScript for Markdown Preview -->
+    <script>
+        document
+            .getElementById("preview-button")
+            .addEventListener("click", function (event) {
+                event.preventDefault();
+                const content = document.getElementById("content").value;
+
+                fetch("{{ preview_endpoint }}", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({markdown: content}),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        document.getElementById("preview").innerHTML = data.html;
+                    })
+                    .catch((error) => {
+                        document.getElementById("preview").innerHTML =
+                            '<p class="text-danger">Error rendering preview. Please try again.</p>';
+                        console.error("Error:", error);
+                    });
+            });
+    </script>
+{% endblock %}

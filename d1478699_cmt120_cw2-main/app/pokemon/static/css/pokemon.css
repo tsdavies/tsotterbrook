@@ -1,0 +1,15 @@
+.recent-searches img {
+  border: 2px solid #1e90ff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.recent-searches img:hover {
+  transform: scale(1.2);
+  border-color: #ff69b4
+}
+
+.pokemon-card .card-img-top {
+  max-width: 100px;
+  margin: 10px auto;
+}
+
