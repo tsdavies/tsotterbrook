@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f68e9cb5-d4de-46b0-b239-10f97900bd66" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/d1478699_cmt120_cw2-main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/about/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/about/routes/about.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/about/templates/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/database/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/database/authenticate_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/database/is_admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/database/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/database/models/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/database/register_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/forms/login_form.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/forms/register_form.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/routes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/routes/login.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/routes/logout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/routes/register.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/templates/forbidden.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/authentication/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/database/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/database/models/blog_post.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/database/models/comment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/forms/blog_post_form.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/forms/comment_form.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/routes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/routes/blog.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/routes/delete_comment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/routes/delete_post.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/routes/edit_post.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/routes/markdown_preview.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/routes/new_post.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/routes/post_detail.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/templates/blog_post.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/templates/blog_post_detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/templates/blog_tile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/blog/templates/blogs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/contact/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/contact/forms/contact_form.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/contact/routes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/contact/routes/contact.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/contact/templates/contact.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/extensions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/routes/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/routes/data/initial_pokemon_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/routes/data/load_initial_pokemon_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/routes/fetch_pokemon_by_name.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/routes/handle_pokemon_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/routes/search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/routes/utils/get_pokemon_color.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/routes/utils/initialise_session_pokemon.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/routes/utils/update_session_pokemon.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/static/css/pokemon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/pokemon/templates/pokemon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/register_routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/static/css/buttons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/static/css/card_styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/static/css/flash_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/static/css/navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/static/images/avatar.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/static/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/app/templates/page_template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/instance/app.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/migrations/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/migrations/versions/6727b62f496a_add_timestamp_column_to_blogpost.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/d1478699_cmt120_cw2-main/wsgi.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2rcRbxyVeRkE5yVQinDhHHpwOAE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.tsotterbrook.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/tammy/github/tsotterbrook/wsgi.py",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="tsotterbrook" type="PythonConfigurationType" factoryName="Python">
+      <module name="tsotterbrook" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.11 virtualenv at C:\Users\tammy\github\tsotterbrook\venv" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wsgi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f68e9cb5-d4de-46b0-b239-10f97900bd66" name="Changes" comment="" />
+      <created>1736856452784</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736856452784</updated>
+      <workItem from="1736856454098" duration="523000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tsotterbrook$tsotterbrook.coverage" NAME="tsotterbrook Coverage Results" MODIFIED="1736856980241" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
