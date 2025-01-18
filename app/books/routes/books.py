@@ -19,7 +19,7 @@ def books():
         if not query or len(query) < 2:
             error = "Please enter a search query with at least 2 characters."
         else:
-            url = f"https://www.googleapis.com/books/v1/volumes?q={query}&projection=full&maxResults=15&key=AIzaSyCTOhbQiiug4sGQyvSvKS3QlSqabldw_HI"
+            url = f"https://www.googleapis.com/books/v1/volumes?q={query}&projection=full&maxResults=15&key=API_KEY_HERE"
             response = requests.get(url)
 
             if response.status_code == 200:
