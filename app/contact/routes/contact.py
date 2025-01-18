@@ -49,4 +49,4 @@ def contact():
         return redirect(url_for("contact.contact"))
 
     # Render the contact form page if not submitted or validation fails
-    return render_template("contact.html", form=form)
+    return render_template("contact.html", form=form, title="Contact")

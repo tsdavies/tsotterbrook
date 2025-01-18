@@ -1,0 +1,142 @@
+{% extends "page_template.html" %}
+
+
+{% block content %}
+    <link
+  rel="stylesheet"
+  href="{{ url_for('books.static', filename='css/books.css') }}"
+/>
+
+<main class="container my-5">
+  <section>
+    <h2>OTTERBROOK'S BOOK SEARCH<br><br>What do you want to read today?</h2>
+<form method="POST" action="{{ url_for('books.books') }}" class="needs-validation" novalidate>
+    <div style="display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+        <!-- Input Field -->
+        <div style="flex: 2; display: flex; flex-direction: column; min-width: 250px;">
+            <input
+                type="search"
+                name="query"
+                placeholder="Enter a book title or author"
+                class="form-control"
+                required
+                minlength="2"
+                aria-describedby="queryHelp">
+            <div class="invalid-feedback">
+                Please enter at least 2 characters.
+            </div>
+        </div>
+
+        <!-- Sort Dropdown -->
+        <div style="flex: 1; display: flex; flex-direction: column; min-width: 150px;">
+            <select
+                name="sort_by"
+                id="sort_by"
+                class="form-select">
+                <option value="rating_desc">Rating (High to Low)</option>
+                <option value="rating_asc">Rating (Low to High)</option>
+                <option value="title_asc">Title (A-Z)</option>
+                <option value="title_desc">Title (Z-A)</option>
+                <option value="author_asc">Author (A-Z)</option>
+                <option value="author_desc">Author (Z-A)</option>
+                <option value="date_desc">Publication Date (Newest First)</option>
+                <option value="date_asc">Publication Date (Oldest First)</option>
+            </select>
+        </div>
+
+        <!-- Search Button -->
+        <div style="flex: 1; min-width: 150px;">
+            <button type="submit"
+                style="padding: 0.5rem 1rem; border: none; border-radius: 0.375rem; background: linear-gradient(90deg, #007bff, #6610f2); color: #fff; font-size: 1rem; width: 100%;">
+                Search
+            </button>
+        </div>
+    </div>
+</form>
+
+
+    <!-- Results Section -->
+    {% if books %}
+        <section class="mt-4">
+            <h3>Search Results</h3>
+            {% for book in books %}
+                <div class="card mb-4 shadow-sm">
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="{{ book.image }}" class="card-img" alt="Book cover for {{ book.title }}">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ book.title }}</h5>
+                                <p class="card-text">
+                                    <strong>Author(s):</strong> {{ book.authors | join(', ') }}<br>
+                                    <strong>Publisher:</strong> {{ book.publisher }}<br>
+                                    <strong>Published:</strong> {{ book.published_date }}<br>
+                                    <strong>Pages:</strong> {{ book.page_count }}<br>
+                                    <strong>Categories:</strong> {{ book.categories | join(', ') }}<br>
+                                    <strong>Average Rating:</strong> {{ book.average_rating }} ⭐ ({{ book.ratings_count }} ratings)<br>
+                                </p>
+                                <p class="card-text"><strong>Description:</strong> {{ book.description }}</p>
+                                <a href="{{ book.preview_link }}" class="btn btn-primary btn-sm" target="_blank">Preview</a>
+                                <a href="{{ book.info_link }}" class="btn btn-secondary btn-sm" target="_blank">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    {% elif no_results %}
+        <p class="text-danger mt-4">No books found. Please try a different search query.</p>
+    {% endif %}
+<script>
+  (function () {
+    'use strict';
+
+    // Select all forms with the "needs-validation" class
+    const forms = document.querySelectorAll('.needs-validation');
+
+    // Loop through each form
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        // Add a submit event listener to the form
+        form.addEventListener('submit', function (event) {
+            // Prevent form submission if invalid
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+            // Add the "was-validated" class to show validation states
+            form.classList.add('was-validated');
+        }, false);
+
+        // Handle input changes to update validity states dynamically
+        const inputs = form.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            // Clear validation state on input changes
+            input.addEventListener('input', () => {
+                if (form.classList.contains('was-validated')) {
+                    if (input.checkValidity()) {
+                        input.classList.add('is-valid');
+                        input.classList.remove('is-invalid');
+                    } else {
+                        input.classList.add('is-invalid');
+                        input.classList.remove('is-valid');
+                    }
+                }
+            });
+
+            // Ensure error messages do not show initially
+            input.addEventListener('focus', () => {
+                input.classList.remove('is-invalid');
+                input.classList.remove('is-valid');
+            });
+        });
+    });
+})();
+
+
+</script>
+  </section>
+</main>
+
+{% endblock %}

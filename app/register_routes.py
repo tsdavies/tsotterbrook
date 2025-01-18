@@ -3,6 +3,8 @@ from app.authentication import auth_bp
 from app.blog import blog_bp
 from app.contact import contact_bp
 from app.pokemon import pokemon_bp
+from app.hello import hello_bp
+from app.books import books_bp
 
 
 def register_routes(app):
@@ -20,3 +22,5 @@ def register_routes(app):
     app.register_blueprint(blog_bp, url_prefix="/blog")  # Blog-related routes
     app.register_blueprint(about_bp, url_prefix="/")  # About page routes (default root)
     app.register_blueprint(contact_bp, url_prefix="/contact")  # Contact page routes
+    app.register_blueprint(hello_bp, url_prefix="/hello")  # Hello page routes
+    app.register_blueprint(books_bp, url_prefix="/books")  # books page routes

@@ -1,0 +1,23 @@
+/* Default State: Hide error messages */
+.invalid-feedback {
+    display: block; /* Reserve space */
+    visibility: hidden; /* Hide the feedback text */
+    height: 1.5em; /* Space for error message */
+    color: #dc3545; /* Red color for error message */
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Show error feedback only when invalid and was-validated */
+.was-validated input:invalid ~ .invalid-feedback {
+    visibility: visible;
+}
+
+/* Valid and invalid styles for inputs */
+input.is-valid {
+    border-color: #28a745; /* Green border for valid inputs */
+}
+
+input.is-invalid {
+    border-color: #dc3545; /* Red border for invalid inputs */
+}

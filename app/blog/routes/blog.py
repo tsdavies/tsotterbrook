@@ -20,4 +20,4 @@ def blog():
     ).all()
 
     # Render the 'blogs.html' template with the list of posts
-    return render_template("blogs.html", posts=posts)
+    return render_template("blogs.html", posts=posts, title="Blog")
